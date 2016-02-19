@@ -1,0 +1,209 @@
+[{
+  "id":"651ba345-67c8-40b0-8bab-1dd3e39a60b1",
+  "firstName":"Diana",
+  "lastName":"Marshall",
+  "email":"dmarshall0@canalblog.com",
+  "password":"jI6gXJqW15C4",
+  "addresses":[{
+    "firstName":"Léa",
+    "lastName":"Alvarez",
+    "streetName":"Prairie Rose",
+    "streetNumber":"30574",
+    "city":"Turets-Bayary",
+    "postalCode":"04888",
+    "country":"AT"
+  },{
+    "firstName":"Thérèsa",
+    "lastName":"Bennett",
+    "streetName":"Lillian",
+    "streetNumber":"91300",
+    "city":"Hispania",
+    "postalCode":"57937",
+    "country":"IT"
+  },{
+    "firstName":"Mélissandre",
+    "lastName":"Morrison",
+    "streetName":"Anniversary",
+    "streetNumber":"96",
+    "city":"Chợ Lầu",
+    "postalCode":"32535",
+    "country":"CH"
+  },{
+    "firstName":"Kévina",
+    "lastName":"Holmes",
+    "streetName":"Summerview",
+    "streetNumber":"1129",
+    "city":"Little Current",
+    "postalCode":"38166",
+    "country":"IT"
+  },{
+    "firstName":"Vérane",
+    "lastName":"Scott",
+    "streetName":"Hansons",
+    "streetNumber":"735",
+    "city":"Carpenter",
+    "postalCode":"47770",
+    "country":"IT"
+  }],
+  "dateOfBirth":"1977-04-28",
+  "customerGroup":{
+    "id":"cdd78a5c-8f77-4206-b86c-033a96afa454",
+    "typeId":"customer-group",
+    "obj": {
+      "name": "group 1"
+    }
+  },
+  "customerNumber":"6967166"
+},{
+  "id":"f19a1c5a-6741-40cb-9c8a-b7c708e581b2",
+  "firstName":"Juan",
+  "lastName":"Nelson",
+  "email":"jnelson1@mediafire.com",
+  "password":"0C1vJg6yoGnm",
+  "addresses":[{
+    "firstName":"Gérald",
+    "lastName":"Carpenter",
+    "streetName":"Kim",
+    "streetNumber":"91398",
+    "city":"Sukamulya",
+    "postalCode":"05239",
+    "country":"IT"
+  },{
+    "firstName":"Marylène",
+    "lastName":"Brooks",
+    "streetName":"Saint Paul",
+    "streetNumber":"985",
+    "city":"Venlo",
+    "postalCode":"7848",
+    "country":"FR"
+  },{
+    "firstName":"Léone",
+    "lastName":"Warren",
+    "streetName":"Sloan",
+    "streetNumber":"60338",
+    "city":"Sirte",
+    "postalCode":"60201",
+    "country":"IT"
+  },{
+    "firstName":"Cécile",
+    "lastName":"Stewart",
+    "streetName":"Northridge",
+    "streetNumber":"48",
+    "city":"Dąbrowa",
+    "postalCode":"66718",
+    "country":"IT"
+  },{
+    "firstName":"Ruì",
+    "lastName":"Gonzales",
+    "streetName":"Victoria",
+    "streetNumber":"9277",
+    "city":"Trunovskoye",
+    "postalCode":"96492",
+    "country":"CH"
+  }],
+  "dateOfBirth":"1969-05-03",
+  "customerGroup":{
+    "id":"c434943d-917f-484b-bf49-8545f827aa92",
+    "typeId":"customer-group",
+    "obj": {
+      "name": "group 2"
+    }
+  },
+  "customerNumber":"6176221"
+},{
+  "id":"f6ca9f22-9e66-48f5-ba94-ef898a0214d6",
+  "firstName":"Mary",
+  "lastName":"Stewart",
+  "email":"mstewart2@cdc.gov",
+  "password":"HPppjFgJm37",
+  "addresses":[{
+    "firstName":"Torbjörn",
+    "lastName":"Perkins",
+    "streetName":"Colorado",
+    "streetNumber":"3",
+    "city":"Santa Rosa de Viterbo",
+    "postalCode":"11505",
+    "country":"IT"
+  },{
+    "firstName":"Eugénie",
+    "lastName":"Gonzalez",
+    "streetName":"Gateway",
+    "streetNumber":"933",
+    "city":"Karang",
+    "postalCode":"0673",
+    "country":"FR"
+  }],
+  "dateOfBirth":"1959-07-08",
+  "customerGroup":{
+    "id":"b2b2edc8-1501-4f97-b6df-91c1fe3eff76",
+    "typeId":"customer-group",
+    "obj": {
+      "name": "group 3"
+    }
+  },
+  "customerNumber":"1959447"
+},{
+  "id":"495fb34a-cc81-4c5e-90a4-96e277412375",
+  "firstName":"Judith",
+  "lastName":"Gilbert",
+  "email":"jgilbert3@java.com",
+  "password":"KS3eEiG",
+  "addresses":[{
+    "firstName":"Bécassine",
+    "lastName":"Wells",
+    "streetName":"Golf Course",
+    "streetNumber":"1",
+    "city":"Paratinga",
+    "postalCode":"2270",
+    "country":"CH"
+  }],
+  "dateOfBirth":"1972-12-20",
+  "customerGroup":{
+    "id":"ef482e2f-c40c-4a1b-a5d5-20dbde60f98b",
+    "typeId":"customer-group",
+    "obj": {
+      "name": "group 4"
+    }
+  },
+  "customerNumber":"6334179"
+},{
+  "id":"28f94f5c-3412-4707-8fae-d63e3cc983fb",
+  "firstName":"Frances",
+  "lastName":"Chavez",
+  "email":"fchavez4@printfriendly.com",
+  "password":"AkeDAaU",
+  "addresses":[{
+    "firstName":"Bénédicte",
+    "lastName":"Morgan",
+    "streetName":"Donald",
+    "streetNumber":"1",
+    "city":"Pulosari",
+    "postalCode":"6069",
+    "country":"IT"
+  },{
+    "firstName":"Håkan",
+    "lastName":"Reid",
+    "streetName":"Johnson",
+    "streetNumber":"95890",
+    "city":"Micheng",
+    "postalCode":"8607",
+    "country":"IT"
+  },{
+    "firstName":"Lyséa",
+    "lastName":"Frazier",
+    "streetName":"Oxford",
+    "streetNumber":"9484",
+    "city":"Tall Salḩab",
+    "postalCode":"8914",
+    "country":"IT"
+  }],
+  "dateOfBirth":"1993-02-15",
+  "customerGroup":{
+    "id":"0439f0af-d978-4c60-9726-7c3ef084382e",
+    "typeId":"customer-group",
+    "obj": {
+      "name": "group 5"
+    }
+  },
+  "customerNumber":"6050365"
+}]
