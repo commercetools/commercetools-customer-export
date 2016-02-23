@@ -12,6 +12,7 @@ argv = require('optimist')
   .describe('projectKey', 'your commercetools platform project-key')
   .describe('clientId', 'your OAuth client id for the commercetools platform API')
   .describe('clientSecret', 'your OAuth client secret for the commercetools platform API')
+  .describe('accessToken', 'an OAuth access token for the SPHERE.IO API, used instead of clientId and clientSecret')
   .describe('sphereHost', 'SPHERE.IO API host to connect to')
   .describe('fetchHours', 'Number of hours to fetch modified customers')
   .describe('targetDir', 'the folder where exported files are saved')
@@ -86,13 +87,24 @@ readJsonFromPath = (path) ->
   fs.readFileAsync(path, {encoding: 'utf-8'}).then (content) ->
     Promise.resolve JSON.parse(content)
 
-ProjectCredentialsConfig.create()
-.then (credentials) =>
-  clientOptions =
-    config: credentials.enrichCredentials
-      project_key: argv.projectKey
-      client_id: argv.clientId
-      client_secret: argv.clientSecret
+ensureCredentials = ({ accessToken, projectKey, clientId, clientSecret }) ->
+  if accessToken
+    Promise.resolve
+      config:
+        project_key: projectKey
+      access_token: accessToken
+  else
+    ProjectCredentialsConfig.create()
+    .then (credentials) ->
+      Promise.resolve
+        config: credentials.enrichCredentials
+          project_key: projectKey
+          client_id: clientId
+          client_secret: clientSecret
+
+ensureCredentials(argv)
+.then (credentials) ->
+  clientOptions = _.extend credentials,
     timeout: argv.timeout
     user_agent: "#{package_json.name} - #{package_json.version}"
   clientOptions.host = argv.sphereHost if argv.sphereHost
