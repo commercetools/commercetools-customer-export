@@ -113,7 +113,7 @@ ensureCredentials(argv)
     client: clientOptions
     export:
       fetchHours: argv.fetchHours
-      csvTemplate: argv.csvTemplate
+      csvTemplate: argv.csvTemplate || 'data/template-customer-simple.csv'
 
   ensureExportDir()
   .then (outputDir) =>
