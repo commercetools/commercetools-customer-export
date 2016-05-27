@@ -3,7 +3,7 @@
 # Customer export
 
 
-[![Build Status](https://secure.travis-ci.org/mmoelli/commercetools-customer-export.png?branch=master)](http://travis-ci.org/mmoelli/commercetools-customer-export) [![NPM version](https://badge.fury.io/js/commercetools-customer-export.png)](http://badge.fury.io/js/commercetools-customer-export) [![Coverage Status](https://coveralls.io/repos/mmoelli/commercetools-customer-export/badge.png)](https://coveralls.io/r/mmoelli/commercetools-customer-export) [![Dependency Status](https://david-dm.org/mmoelli/commercetools-customer-export.png?theme=shields.io)](https://david-dm.org/mmoelli/commercetools-customer-export) [![devDependency Status](https://david-dm.org/mmoelli/commercetools-customer-export/dev-status.png?theme=shields.io)](https://david-dm.org/mmoelli/commercetools-customer-export#info=devDependencies)
+[![Build Status](https://secure.travis-ci.org/mmoelli/commercetools-customer-export.png?branch=master)](http://travis-ci.org/mmoelli/commercetools-customer-export) [![NPM version](https://badge.fury.io/js/sphere-customer-export.png)](http://badge.fury.io/js/sphere-customer-export) [![Coverage Status](https://coveralls.io/repos/mmoelli/commercetools-customer-export/badge.png)](https://coveralls.io/r/mmoelli/commercetools-customer-export) [![Dependency Status](https://david-dm.org/mmoelli/commercetools-customer-export.png?theme=shields.io)](https://david-dm.org/mmoelli/commercetools-customer-export) [![devDependency Status](https://david-dm.org/mmoelli/commercetools-customer-export/dev-status.png?theme=shields.io)](https://david-dm.org/mmoelli/commercetools-customer-export#info=devDependencies)
 
 This module allows to export customers to CSV, with SFTP support.
 
