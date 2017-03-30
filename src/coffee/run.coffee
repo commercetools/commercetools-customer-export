@@ -14,7 +14,7 @@ argv = require('optimist')
   .describe('clientSecret', 'your OAuth client secret for the commercetools platform API')
   .describe('accessToken', 'an OAuth access token for the SPHERE.IO API, used instead of clientId and clientSecret')
   .describe('sphereHost', 'SPHERE.IO API host to connect to')
-  .describe('fetchHours', 'Number of hours to fetch modified customers')
+  .describe('where', 'where predicate used to filter customers exported. More info here http://dev.commercetools.com/http-api.html#predicates')
   .describe('targetDir', 'the folder where exported files are saved')
   .describe('useExportTmpDir', 'whether to use a system tmp folder to store exported files')
   .describe('csvTemplate', 'CSV template to define the structure of the export')
@@ -29,7 +29,6 @@ argv = require('optimist')
   .describe('logDir', 'directory to store logs')
   .describe('logSilent', 'use console to print messages')
   .describe('timeout', 'Set timeout for requests')
-  .default('fetchHours', 48) # let's keep it limited to 48h
   .default('targetDir', path.join(__dirname,'../exports'))
   .default('useExportTmpDir', false)
   .default('fileWithTimestamp', false)
@@ -112,7 +111,7 @@ ensureCredentials(argv)
   customerExport = new CustomerExport
     client: clientOptions
     export:
-      fetchHours: argv.fetchHours
+      where: argv.where
       csvTemplate: argv.csvTemplate || "#{__dirname}/../data/template-customer-simple.csv"
 
   ensureExportDir()
