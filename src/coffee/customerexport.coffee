@@ -9,7 +9,7 @@ class CustomerExport
 
   constructor: (options = {}) ->
     @_exportOptions = _.defaults (options.export or {}),
-      fetchHours: 48
+      where: ''
     @client = new SphereClient options.client
     @csvMapping = new CsvMapping @_exportOptions
 
@@ -22,9 +22,13 @@ class CustomerExport
     .then (content) => @csvMapping.mapCustomers content, customers
 
   _fetchCustomers: ->
-    @client.customers.all()
+    if @_exportOptions.where
+      @client.customers.where(@_exportOptions.where)
+    else
+      @client.customers.all()
+
+    @client.customers
     .expand('customerGroup')
-    .last("#{@_exportOptions.fetchHours}h")
     .fetch()
     .then (result) ->
       allCustomers = result.body.results
