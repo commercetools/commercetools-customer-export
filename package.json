@@ -1,7 +1,7 @@
 {
   "name": "sphere-customer-export",
   "description": "Quick and easy way to export your customers from commercetools platform into CSV files, with SFTP support!",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/sphereio/commercetools-customer-export",
   "private": false,
   "keywords": [
