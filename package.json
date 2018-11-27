@@ -48,8 +48,8 @@
     "csv": "0.3.6",
     "optimist": "0.6.1",
     "safe-access": "0.1.0",
-    "sphere-node-sdk": "^1.22.0",
-    "sphere-node-utils": "^0.9.1",
+    "sphere-node-sdk": "^2.1.2",
+    "sphere-node-utils": "^1.0.1",
     "tmp": "0.0.27",
     "underscore": "1.8.3",
     "underscore-mixins": "*"
