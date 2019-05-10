@@ -44,7 +44,7 @@
     "test": "grunt coverage"
   },
   "dependencies": {
-    "bluebird": "2.11.0",
+    "bluebird": "3.5.4",
     "csv": "5.1.1",
     "optimist": "0.6.1",
     "safe-access": "0.1.0",
