@@ -24,6 +24,7 @@ describe 'Mapping utils - CSV', ->
         f6ca9f22-9e66-48f5-ba94-ef898a0214d6,1959447
         495fb34a-cc81-4c5e-90a4-96e277412375,6334179
         28f94f5c-3412-4707-8fae-d63e3cc983fb,6050365
+        
         """
 
       @csvMapping.mapCustomers(template, customersJson)
@@ -63,6 +64,7 @@ describe 'Mapping utils - CSV', ->
         28f94f5c-3412-4707-8fae-d63e3cc983fb,6050365,Bénédicte
         28f94f5c-3412-4707-8fae-d63e3cc983fb,6050365,Håkan
         28f94f5c-3412-4707-8fae-d63e3cc983fb,6050365,Lyséa
+        
         """
 
       @csvMapping.mapCustomers(template, customersJson)
@@ -86,6 +88,7 @@ describe 'Mapping utils - CSV', ->
         f6ca9f22-9e66-48f5-ba94-ef898a0214d6,1959447,group 3
         495fb34a-cc81-4c5e-90a4-96e277412375,6334179,group 4
         28f94f5c-3412-4707-8fae-d63e3cc983fb,6050365,group 5
+        
         """
 
       @csvMapping.mapCustomers(template, customersJson)
