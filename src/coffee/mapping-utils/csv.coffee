@@ -45,8 +45,7 @@ class CsvMapping
 
   _analyseTemplate: (template) ->
     @parse(template)
-    .then (data) =>
-      header = data[0]
+    .then (header) =>
       mappings = _.map header, (entry) =>
         if /addresses/.test entry
           @hasAddressHeader = true
@@ -65,14 +64,20 @@ class CsvMapping
 
   parse: (csvString) ->
     new Promise (resolve, reject) ->
-      Csv().from.string(csvString)
+      Csv.parse(csvString)
       .on 'error', (error) -> reject error
-      .to.array (data) -> resolve data
+      .on 'readable', () ->
+        data = @read()
+        resolve data
 
   toCSV: (header, data) ->
     new Promise (resolve, reject) ->
-      Csv().from([header].concat data)
-      .on 'error', (error) -> reject error
-      .to.string (asString) -> resolve asString
+      Csv.stringify(
+        data,
+        {header:true, columns: header},
+        (err, output) ->
+          return reject err if err
+          resolve output
+      )
 
 module.exports = CsvMapping
