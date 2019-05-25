@@ -1,6 +1,7 @@
 _ = require 'underscore'
 Promise = require 'bluebird'
 Csv = require 'csv'
+csvParse = require 'csv-parse'
 access = require 'safe-access'
 
 class CsvMapping
@@ -64,11 +65,14 @@ class CsvMapping
 
   parse: (csvString) ->
     new Promise (resolve, reject) ->
-      Csv.parse(csvString)
-      .on 'error', (error) -> reject error
-      .on 'readable', () ->
-        data = @read()
-        resolve data
+      csvParse csvString, (err, output) ->
+        if err
+          reject(err)
+
+        if output.length == 0
+          reject(new Error('Template CSV has to have at least one CSV line'))
+
+        resolve(output[0])
 
   toCSV: (header, data) ->
     new Promise (resolve, reject) ->

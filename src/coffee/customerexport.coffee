@@ -22,16 +22,21 @@ class CustomerExport
     .then (content) => @csvMapping.mapCustomers content, customers
 
   _fetchCustomers: ->
-    if @_exportOptions.where
-      @client.customers.where(@_exportOptions.where)
-    else
-      @client.customers.all()
+    customersQuery = @client.customers
+    customersQuery.perPage(200)
+    allCustomers = []
 
-    @client.customers
-    .expand('customerGroup')
-    .fetch()
-    .then (result) ->
-      allCustomers = result.body.results
-      Promise.resolve allCustomers
+    if @_exportOptions.where
+      customersQuery.where(@_exportOptions.where)
+
+
+    customersQuery
+      .expand('customerGroup')
+      .process (result) ->
+        allCustomers = allCustomers.concat(result.body.results)
+        Promise.resolve()
+      .then ->
+        Promise.resolve allCustomers
+
 
 module.exports = CustomerExport

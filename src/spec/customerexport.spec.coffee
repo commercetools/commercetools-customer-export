@@ -23,14 +23,16 @@ describe 'CustomerExport', ->
     expect(csvExport).toThrow(new Error 'You need to provide a csv template for exporting customer information')
 
   it '#_fetchCustomers (all)', (done) ->
-    spyOn(@customerExport.client.customers, 'all')
-    spyOn(@customerExport.client.customers, 'fetch').andCallFake -> Promise.resolve
-      body:
-        results: [1, 2]
+    spyOn(@customerExport.client.customers, 'process')
+      .andCallFake (processFn) ->
+        processFn
+          body:
+            results: [1, 2]
+        Promise.resolve()
+
     @customerExport._fetchCustomers()
     .then (customers) =>
       expect(customers).toEqual [1, 2]
-      expect(@customerExport.client.customers.all).toHaveBeenCalled()
       done()
     .catch (e) -> done e
 
@@ -47,9 +49,12 @@ describe 'CustomerExport', ->
     customerExport = new CustomerExport config
 
     spyOn(customerExport.client.customers, 'where')
-    spyOn(customerExport.client.customers, 'fetch').andCallFake -> Promise.resolve
-      body:
-        results: [1, 2]
+    spyOn(customerExport.client.customers, 'process')
+      .andCallFake (processFn) ->
+        processFn
+          body:
+            results: [1, 2]
+        Promise.resolve()
 
     customerExport._fetchCustomers()
     .then (customers) ->

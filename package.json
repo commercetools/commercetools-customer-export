@@ -46,6 +46,7 @@
   "dependencies": {
     "bluebird": "3.5.4",
     "csv": "5.1.1",
+    "csv-parse": "4.4.1",
     "optimist": "0.6.1",
     "safe-access": "0.1.0",
     "sphere-node-sdk": "^2.1.2",

@@ -128,6 +128,7 @@ ensureCredentials(argv)
       fileName = "customers_#{ts}.csv"
     else
       fileName = 'customers.csv'
+
     csvFile = "#{@outputDir}/#{fileName}"
     logger.info "Storing CSV export to '#{csvFile}'."
     fs.writeFileAsync csvFile, data
