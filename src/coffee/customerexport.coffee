@@ -24,19 +24,15 @@ class CustomerExport
   _fetchCustomers: ->
     customersQuery = @client.customers
     customersQuery.perPage(200)
-    allCustomers = []
 
     if @_exportOptions.where
       customersQuery.where(@_exportOptions.where)
 
-
     customersQuery
       .expand('customerGroup')
       .process (result) ->
-        allCustomers = allCustomers.concat(result.body.results)
-        Promise.resolve()
-      .then ->
-        Promise.resolve allCustomers
+        Promise.resolve(result.body.results)
+      , { accumulate: true }
 
 
 module.exports = CustomerExport
