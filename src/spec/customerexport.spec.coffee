@@ -28,7 +28,7 @@ describe 'CustomerExport', ->
         processFn
           body:
             results: [1, 2]
-        Promise.resolve()
+        Promise.resolve([1, 2])
 
     @customerExport._fetchCustomers()
     .then (customers) =>
@@ -54,7 +54,7 @@ describe 'CustomerExport', ->
         processFn
           body:
             results: [1, 2]
-        Promise.resolve()
+        Promise.resolve([1, 2])
 
     customerExport._fetchCustomers()
     .then (customers) ->

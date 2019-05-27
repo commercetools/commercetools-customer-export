@@ -1,7 +1,6 @@
 _ = require 'underscore'
 Promise = require 'bluebird'
 Csv = require 'csv'
-csvParse = require 'csv-parse'
 access = require 'safe-access'
 
 class CsvMapping
@@ -65,7 +64,7 @@ class CsvMapping
 
   parse: (csvString) ->
     new Promise (resolve, reject) ->
-      csvParse csvString, (err, output) ->
+      Csv.parse csvString, (err, output) ->
         if err
           reject(err)
 
