@@ -64,11 +64,14 @@ class CsvMapping
 
   parse: (csvString) ->
     new Promise (resolve, reject) ->
-      Csv.parse(csvString)
-      .on 'error', (error) -> reject error
-      .on 'readable', () ->
-        data = @read()
-        resolve data
+      Csv.parse csvString, (err, output) ->
+        if err
+          reject(err)
+
+        if output.length == 0
+          reject(new Error('Template CSV has to have at least one CSV line'))
+
+        resolve(output[0])
 
   toCSV: (header, data) ->
     new Promise (resolve, reject) ->
