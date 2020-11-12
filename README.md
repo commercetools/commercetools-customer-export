@@ -50,7 +50,7 @@ The following headers can be used in the CSV template
 - `isEmailVerified`
 - `addressed.*` - eg. `id`, `streetName` or `additionalStreetInfo`
 
-In general you can get access to any property of the customer object. Find a reference in our [API documentation](http://dev.sphere.io/http-api-projects-customers.html#customer).
+In general you can get access to any property of the customer object. Find a reference in our [API documentation](https://docs.commercetools.com/api/projects/customers).
 
 > Note that when at least one `addresses` header is given the resulting CSV contains a row per address. Otherwise it only contains one row per customer.
 
