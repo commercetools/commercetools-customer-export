@@ -10,7 +10,7 @@ This module allows to export customers to CSV, with SFTP support.
 ## Getting started
 
 ```bash
-$ npm install -g commercetools-customer-export
+$ npm install -g sphere-customer-export
 
 # output help screen
 $ customer-export
