@@ -14,6 +14,7 @@ argv = require('optimist')
   .describe('clientSecret', 'your OAuth client secret for the commercetools platform API')
   .describe('accessToken', 'an OAuth access token for the SPHERE.IO API, used instead of clientId and clientSecret')
   .describe('sphereHost', 'SPHERE.IO API host to connect to')
+  .describe('sphereAuthHost', 'SPHERE.IO Auth host to connect to')
   .describe('where', 'where predicate used to filter customers exported. More info here http://dev.commercetools.com/http-api.html#predicates')
   .describe('targetDir', 'the folder where exported files are saved')
   .describe('useExportTmpDir', 'whether to use a system tmp folder to store exported files')
@@ -107,6 +108,7 @@ ensureCredentials(argv)
     timeout: argv.timeout
     user_agent: "#{package_json.name} - #{package_json.version}"
   clientOptions.host = argv.sphereHost if argv.sphereHost
+  clientOptions.oauth_host = argv.sphereAuthHost if argv.sphereAuthHost
 
   customerExport = new CustomerExport
     client: clientOptions
